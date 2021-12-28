@@ -8,17 +8,13 @@ function App() {
   const nameA = 'Carol from App Component';
   const nameB = 'Janet from App Component';
 
-  const [name, setName] = useState('Sally');
-
-  const changeName = () => {
-    setName('Sally 1');
-  };
+  const [name, setName] = useState('Sally', true);
 
   return (
     <>
       <ComponentOne name={nameA} />
       <ComponentTwo name={nameB} />
-      <ComponentThree name={name} />
+      <ComponentThree name={name} setName={setName} />
     </>
   );
 }
