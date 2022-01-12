@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ThingOne from './ThingOne';
+import dogImg from '../images/dog.jpg';
+import catImg from '../images/cat.jpg';
 
-const ComponentTwo = (props) => {
-  const name = 'Steve';
+const ComponentTwo = () => {
+  const [imageA, setImage] = useState(catImg);
+  const imageB = dogImg;
 
   return (
     <div>
-      <h1>This is Component Two</h1>
-      <p>From Component Two: const name = {name}</p>
-      <p>From Component Two: props.name = {props.name}.</p>
-      <p>
-        In the App component there is a const nameB = Janet from App Component.
-        Then: Component name=nameB (with curly brackets around nameB)
-      </p>
+      <h1>Component Two</h1>
+      <ThingOne image={imageA} setImage={setImage} />
     </div>
   );
 };
