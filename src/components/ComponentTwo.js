@@ -4,8 +4,8 @@ import dogImg from '../images/dog.jpg';
 import catImg from '../images/cat.jpg';
 
 const ComponentTwo = () => {
-  const [imageA, setImage] = useState(catImg);
-  const imageB = dogImg;
+  const [imageA, setImage] = useState({ imageA: catImg, imageB: dogImg });
+  // const imageB = dogImg;
 
   return (
     <div>
