@@ -4,11 +4,7 @@ export default function ThingTwo(props) {
   const [state, setState] = useState({ age: 19, siblingsNum: 4 });
   const { age, siblingsNum } = state;
 
-  const handleClick = (val) =>
-    setState({
-      ...state,
-      [val]: state[val] + 1,
-    });
+  const handleClick = (val) => setState({ ...state, [val]: state[val] + 1 });
 
   return (
     <div>

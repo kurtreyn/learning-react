@@ -3,23 +3,31 @@ import dogImg from '../images/dog.jpg';
 import catImg from '../images/cat.jpg';
 
 export default function ThingOne() {
-  const [image, setImage] = useState({ imageA: catImg, imageB: dogImg });
+  // ----THIS ALSO WORKS ----
+  // const [image, setImage] = useState({ imageA: catImg });
+  // const changePicture = () => {
+  //   if (image.imageA === catImg) {
+  //     console.log('click');
+  //     setImage({ ...image, imageA: dogImg });
+  //   } else {
+  //     setImage({ ...image, imageA: catImg });
+  //   }
+  // };
 
-  const { imageA, imageB } = image;
+  const [image, setImage] = useState(catImg);
 
   const changePicture = () => {
-    if (imageA === imageA) {
-      console.log('true');
-      setImage(imageB);
+    if (image === catImg) {
+      console.log('click');
+      setImage(dogImg);
     } else {
-      console.log('false');
-      setImage(imageB);
+      setImage(catImg);
     }
   };
 
   return (
     <div>
-      <img src={imageB} />
+      <img src={image} />
       <button onClick={changePicture}>Change Image</button>
     </div>
   );
