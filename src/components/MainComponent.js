@@ -13,8 +13,8 @@ export default function MainComponent() {
     <>
       {/* <ComponentOne name={name} setName={setName} /> */}
       {/* <ComponentOne name={nameTwo} changeName={changeName} /> */}
-      {/* <ComponentTwo /> */}
-      <ComponentFour />
+      <ComponentTwo />
+      {/* <ComponentFour /> */}
     </>
   );
 }
